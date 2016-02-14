@@ -110,6 +110,5 @@ $(document).ready(function() {
 		var firstWord = names[numRand];
 		var secondWord = names[numRand2];		
 		$("#list").append("<br>",firstWord," ",secondWord);
-
 	});
 });
