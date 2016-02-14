@@ -102,13 +102,12 @@ var names = ["Fornication" , "Under" , "Consent" ,  "Member" , "DJ" , "Alcohol" 
 "Aists" , "Roller" , "Coaster" , "Teacher" , "Vagina" , "Mountain" , "Super" , "Moon" , "Unprofessional" , "Wrestling" , "Abortion" , "Magma" , "Assistant" , "Nightmare"];
 
 $(document).ready(function() {
-	$("#btn").click(function(){
-		var numRand=Math.floor(Math.random()*1138);
-		var numRand2=Math.floor(Math.random()*1138);		
-		//document.getElementById("firstWord").innerHTML = names[numRand];
-		//document.getElementById("secondWord").innerHTML = names[numRand2];
-		var firstWord = names[numRand];
-		var secondWord = names[numRand2];		
-		$("#list").append("<br>",firstWord," ",secondWord);
-	});
+	$("#btn").click(appendWords);
 });
+	function randomWord(){
+		var numRand=Math.floor(Math.random()*names.length);
+		return names[numRand];		
+	}
+	function appendWords(){
+		$("#list").append("<br>",randomWord()," ",randomWord());		
+	}
